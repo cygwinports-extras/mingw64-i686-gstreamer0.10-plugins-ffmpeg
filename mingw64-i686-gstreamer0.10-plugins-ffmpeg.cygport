@@ -1,0 +1,20 @@
+CROSS_HOST="i686-w64-mingw32"
+inherit cross gst-plugins
+
+NAME="mingw64-i686-gstreamer0.10-plugins-ffmpeg"
+VERSION=0.10.13
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="GStreamer 0.10 FFmpeg plugins for Win32 toolchain"
+DESCRIPTION="GStreamer FFmpeg plug-in contains a set of elements using the
+FFmpeg library code. It contains most popular decoders as well as very fast
+colorspace conversion elements."
+
+PATCH_URI="0.10.12-vpath.patch
+           0.10.13-w32-threads.patch"
+
+# hack around stdcall libbz2 and linkage of static libs into DLL
+CYGCONF_ARGS="
+	ac_cv_lib_bz2_BZ2_bzlibVersion=yes
+	lt_cv_deplibs_check_method=pass_all
+"
