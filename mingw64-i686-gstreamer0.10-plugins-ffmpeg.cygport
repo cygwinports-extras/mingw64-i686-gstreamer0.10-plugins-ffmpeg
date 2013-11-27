@@ -3,7 +3,7 @@ inherit cross gst-plugins
 
 NAME="mingw64-i686-gstreamer0.10-plugins-ffmpeg"
 VERSION=0.10.13
-RELEASE=2
+RELEASE=3
 CATEGORY="Devel"
 SUMMARY="GStreamer 0.10 FFmpeg plugins for Win32 toolchain"
 DESCRIPTION="GStreamer FFmpeg plug-in contains a set of elements using the
